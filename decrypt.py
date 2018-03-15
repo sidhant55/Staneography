@@ -3,7 +3,7 @@ from numpy import array
 from PIL import Image
 
 
-file_data=Image.open('encrypt.png')
+file_data=Image.open('Images/encrypt.png')
 file_data=file_data.convert('RGB')
 data=np.array(file_data)
 

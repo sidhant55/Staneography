@@ -3,7 +3,7 @@ from numpy import array
 from PIL import Image
 
 
-file_data=Image.open('work.png')
+file_data=Image.open('Images/work.png')
 file_data=file_data.convert('RGB')
 data=np.array(file_data)
 
@@ -18,7 +18,7 @@ def find_bits(ch):
 	for i in range(3):
 		bits.append(asc%8)
 		asc=asc//8
-	print(bits, end=" ")
+	# print(bits, end=" ")
 	return(bits)
 
 
@@ -43,15 +43,15 @@ for i in range (740):
 		if (k==len(code)):
 			flag=1
 			break
-		print(data[i][j], end=" ")
+		# print(data[i][j], end=" ")
 		data[i][j]=encry(data[i][j],code[k])
-		print(data[i][j])
+		# print(data[i][j])
 		k+=1
 	if (flag==1):
 		break;
 
 im=Image.fromarray(data)
-im.save('encrypt.png')
+im.save('Images/encrypt.png')
 
 
 # file_data=Image.open('encrypt.png')
